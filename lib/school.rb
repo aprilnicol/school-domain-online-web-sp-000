@@ -1,11 +1,26 @@
 # code here
-school = School.new("Bayside High School")
-school.add_student("Zach Morris", 9)
-school.roster
-hash["new_key"] = []
-hash["new_key"] << "new_value_for_value_array"
-
-hash
- => {"new_key"=>["new_value_for_value_array"]}
- school.grade(9)
- school.sort
+class School 
+  def initialize(school_name)
+    @school_name = school_name
+    @rooster = {}
+  end 
+  def roster
+    @roster
+  end 
+  def add_student(name, grade)
+    @student_name = name 
+    @grade = grade
+    if @roster.include?(grade)== false 
+      @roster(grade) = []
+    end 
+    @roster(grade) << name 
+  end 
+  def grade(number)
+    @roster(number)
+  end 
+  def sort 
+    @roster.each do |grade, name|
+      @roster(grade) = name.sort 
+    end 
+  end 
+end 
