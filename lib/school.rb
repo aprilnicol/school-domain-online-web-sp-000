@@ -4,19 +4,19 @@ attr_accessor :name, :roster
 def initialize(name)
   @name = name
   @roster = {}
-end 
+end
 def add_student(students_name, grade)
   roster[grade] ||=[]
   roster[grade] << students_name
-end 
+end
 def grade(students_grade)
   roster[students_grade]
-end 
+end
 def sort
   sorted = {}
   roster.each do |grade, students|
     sorted[grade] = students.sort
-  end 
+  end
   sorted
-end 
+end
 end 
