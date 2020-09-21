@@ -11,12 +11,12 @@ class School
     @student_name = name
     @grade = grade
     if @roster.include?(grade)== false
-      @roster(grade) = []
+      @roster[grade] = []
     end
-    @roster(grade) << name
+    @roster[grade] << name
   end
-  def grade(number)
-    @roster(number)
+  def grade[number]
+    @roster[number]
   end
   def sort
     @roster.each do |grade, name|
