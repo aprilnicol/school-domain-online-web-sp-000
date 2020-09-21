@@ -1,26 +1,26 @@
 # code here
-class School 
+class School
   def initialize(school_name)
     @school_name = school_name
     @rooster = {}
-  end 
+  end
   def roster
     @roster
-  end 
+  end
   def add_student(name, grade)
-    @student_name = name 
+    @student_name = name
     @grade = grade
-    if @roster.include?(grade)== false 
+    if @roster.include?(grade)== false
       @roster(grade) = []
-    end 
-    @roster(grade) << name 
-  end 
+    end
+    @roster(grade) << name
+  end
   def grade(number)
     @roster(number)
-  end 
-  def sort 
+  end
+  def sort
     @roster.each do |grade, name|
-      @roster(grade) = name.sort 
-    end 
-  end 
+      @roster(grade) = name.sort
+    end
+  end
 end 
